@@ -1,4 +1,4 @@
-from lib.gen_func import parse_command
+import lib.general_func as g
 from slackclient import SlackClient
 import os, json
 
@@ -21,7 +21,7 @@ class UtilBot:
                     
                     # If the incoming json type is a message parse the text and check it for commands.
                     if incoming_json["type"] == "message":
-                        outgoing_message = parse_command(incoming_json["text"])
+                        outgoing_message = g.parse_command(incoming_json["text"])
                         
                         if outgoing_message is not None:
                             sc.api_call(
@@ -32,4 +32,3 @@ class UtilBot:
                             
         else:
             print ("Connection Failed")
-            
