@@ -27,7 +27,7 @@ class UtilBot:
                             sc.api_call(
                                 "chat.postMessage",
                                 channel=incoming_json["channel"],
-                                text="Hostname is " + outgoing_message
+                                text=outgoing_message
                             )
                             
         else:
