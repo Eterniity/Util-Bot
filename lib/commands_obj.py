@@ -8,3 +8,4 @@ class Commands:
         self.func = func     
 
 hostname_obj = Commands(c.hostname_func, 30)
+free_obj = Commands(c.free_func, 30)
